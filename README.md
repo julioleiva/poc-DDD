@@ -61,50 +61,50 @@ npm run lint
 
 # Estructura del proyecto
 
-├── src
-│   ├── assets
-│   │
-│   ├── components
-│   │   ├── AppForm
-│   │   │   └── AppForm.tsx
-│   │   ├── AppItemsActions
-│   │   │   └── index.tsx
-│   │   ├── GridViewComponent
-│   │   │   └── index.tsx
-│   │   ├── ListViewComponent
-│   │   │   └── index.tsx
-│   │   ├── Modal
-│   │   │   └── index.tsx
-│   │   └── SearchComponent
-│   │       └── index.tsx
-│   │
-│   ├── contexts
-│   │   ├── AppContext.tsx
-│   │   └── useAppContext.ts
-│   │
-│   ├── models
-│   │   └── Application.ts
-│   │
-│   ├── pages
-│   │   ├── AppsDetail
-│   │   │   └── index.tsx
-│   │   └── AppsPage
-│   │       └── AppsPage.tsx
-│   │
-│   ├── services
-│   │   ├── AppService.ts
-│   │   └── factory.ts
-│   │
-│   └── styles
-│       └── index.css
-│
-├── test
-│   ├── unit
-│   │   ├── components
-│   │   ├── models
-│   │  
+    ├── src
+    │   ├── assets
+    │   │
+    │   ├── components
+    │   │   ├── AppForm
+    │   │   │   └── AppForm.tsx
+    │   │   ├── AppItemsActions
+    │   │   │   └── index.tsx
+    │   │   ├── GridViewComponent
+    │   │   │   └── index.tsx
+    │   │   ├── ListViewComponent
+    │   │   │   └── index.tsx
+    │   │   ├── Modal
+    │   │   │   └── index.tsx
+    │   │   └── SearchComponent
+    │   │       └── index.tsx
+    │   │
+    │   ├── contexts
+    │   │   ├── AppContext.tsx
+    │   │   └── useAppContext.ts
+    │   │
+    │   ├── models
+    │   │   └── Application.ts
+    │   │
+    │   ├── pages
+    │   │   ├── AppsDetail
+    │   │   │   └── index.tsx
+    │   │   └── AppsPage
+    │   │       └── AppsPage.tsx
+    │   │
+    │   ├── services
+    │   │   ├── AppService.ts
+    │   │   └── factory.ts
+    │   │
+    │   └── styles
+    │       └── index.css
+    │
+    ├── test
+    │   ├── unit
+    │   │   ├── components
+    │   │   ├── models
+    │   │  
+    ──
 
----
 
 # Justificación Técnica
 
