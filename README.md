@@ -63,7 +63,7 @@ npm run lint
 
     ├── src
     │   ├── assets
-    │   │
+    │   │── cypress
     │   ├── components
     │   │   ├── AppForm
     │   │   │   └── AppForm.tsx
@@ -101,7 +101,7 @@ npm run lint
     ├── test
     │   ├── unit
     │   │
-    │   │── e2e  
+    │   │── integration
     
 
 
