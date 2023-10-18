@@ -13,7 +13,7 @@ Plataforma de gestión y visualización de aplicaciones construida con práctica
 1. **Clona el repositorio**
 
 ```bash
-git clone https://github.com/julioleiva/poc-tdd.git
+git clone https://github.com/julioleiva/poc-ddd.git
 cd poc-tdd
 ```
 
