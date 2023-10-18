@@ -1,18 +1,10 @@
-const tsJestPreset = require('ts-jest/jest-preset');
-
 module.exports = {
-  ...tsJestPreset,
+  preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
+  setupFilesAfterEnv: ['<rootDir>/node_modules/@testing-library/jest-dom/dist'],
   transform: {
-    ...tsJestPreset.transform,
-    '^.+\\.(ts|tsx)$': 'babel-jest',
+    '^.+\\.(ts|tsx)?$': 'ts-jest',
   },
-  setupFiles: [
-    "jest-fetch-mock/setupJest"
-  ],
-  moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
-    ...tsJestPreset.moduleNameMapper,
-  },
-  setupFilesAfterEnv: ['./setupTests.js']
+  testMatch: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+  setupFiles: ['jest-fetch-mock/setupJest'],
 };

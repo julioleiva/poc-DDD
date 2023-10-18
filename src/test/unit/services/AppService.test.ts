@@ -17,7 +17,7 @@ describe('AppService Tests', () => {
         { id: '2', title: 'App 2', route: 'app-2', },
       ];
 
-      fetchMock.mockResponseOnce(JSON.stringify(mockApplications));
+      fetchMock.mockResponseOnce(JSON.stringify(mockApplications), { headers: { 'content-type': 'application/json' } });
 
       const applications = await appService.getApplications();
 
