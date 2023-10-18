@@ -9,7 +9,7 @@ type GridViewProps = {
 
 const GridViewComponent: React.FC<GridViewProps> = ({ items, onEdit, onDelete }) => {
   return (
-    <div className="grid grid-cols-4 gap-4 p-4">
+    <div data-cy="app-item" className="grid grid-cols-4 gap-4 p-4">
       {items.map((item, index) => (
         <div key={index} className="border border-gray-200 p-4 rounded">
           <h2 className="text-xl font-bold">{item.title}</h2>

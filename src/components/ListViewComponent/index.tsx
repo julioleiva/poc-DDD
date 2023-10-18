@@ -9,7 +9,7 @@ type ListViewProps = {
 
 const ListViewComponent: React.FC<ListViewProps> = ({ items, onEdit, onDelete }) => {
   return (
-    <ul className="divide-y divide-gray-200">
+    <ul data-cy="app-item" className="divide-y divide-gray-200">
       {items.map((item, index) => (
         <div key={index} className="border border-gray-200 p-4 rounded">
           <h2 className="text-xl font-bold">{item.title}</h2>

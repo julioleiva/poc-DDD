@@ -102,19 +102,23 @@ const [appToDelete, setAppToDelete] = React.useState<string | null>(null);
   
   return (
     <div>
-      <button onClick={toggleView}>Change View</button>
+      <button data-cy="toggle-view-button" onClick={toggleView}>
+        Change View
+      </button>
       <SearchComponent onSearch={handleSearch} />
       {view === "list" ? (
         <ListViewComponent
+          data-cy="list-view"
           items={filteredApps}
           onEdit={handleEdit}
-          onDelete={handleDelete}  // Aquí se cambió confirmDelete por handleDelete
+          onDelete={handleDelete}
         />
       ) : (
         <GridViewComponent
+          data-cy="grid-view"
           items={filteredApps}
           onEdit={handleEdit}
-          onDelete={handleDelete}  // Aquí se cambió confirmDelete por handleDelete
+          onDelete={handleDelete}
         />
       )}
 
@@ -131,6 +135,7 @@ const [appToDelete, setAppToDelete] = React.useState<string | null>(null);
               <label className="block mb-2 text-sm font-bold">
                 Title:
                 <input
+                  data-cy="app-edit-title-input"
                   value={currentApp.title}
                   onChange={(e) =>
                     setCurrentApp((prev) => {
@@ -144,6 +149,7 @@ const [appToDelete, setAppToDelete] = React.useState<string | null>(null);
                 />
               </label>
               <button
+                data-cy="app-save-button"
                 onClick={() => handleSave(currentApp)}
                 className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
               >
@@ -156,31 +162,31 @@ const [appToDelete, setAppToDelete] = React.useState<string | null>(null);
       )}
 
       {showDeleteConfirmation && (
-       <Modal
-       isOpen={showDeleteConfirmation}
-       title="Delete Confirmation"
-       content={
-         <div className="text-center">
-           <p className="mb-4 text-lg">Are you sure you want to delete this application?</p>
-           <div className="flex justify-around">
-             <button 
-               onClick={confirmDelete}
-               className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-opacity-50 transition duration-300"
-             >
-               Confirm
-             </button>
-             <button 
-               onClick={() => setShowDeleteConfirmation(false)}
-               className="px-4 py-2 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transition duration-300"
-             >
-               Cancel
-             </button>
-           </div>
-         </div>
-       }
-       onClose={() => setShowDeleteConfirmation(false)}
-     />
-     
+        <Modal
+          isOpen={showDeleteConfirmation}
+          title="Delete Confirmation"
+          content={
+            <div className="text-center">
+              <p className="mb-4 text-lg">Are you sure you want to delete this application?</p>
+              <div className="flex justify-around">
+                <button
+                  data-cy="app-delete-confirm-button"
+                  onClick={confirmDelete}
+                  className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-300 focus:ring-opacity-50 transition duration-300"
+                >
+                  Confirm
+                </button>
+                <button
+                  onClick={() => setShowDeleteConfirmation(false)}
+                  className="px-4 py-2 bg-gray-300 text-black rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-opacity-50 transition duration-300"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          }
+          onClose={() => setShowDeleteConfirmation(false)}
+        />
       )}
     </div>
   );

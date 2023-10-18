@@ -100,10 +100,9 @@ npm run lint
     │
     ├── test
     │   ├── unit
-    │   │   ├── components
-    │   │   ├── models
-    │   │  
-    ──
+    │   │
+    │   │── e2e  
+    
 
 
 # Justificación Técnica
